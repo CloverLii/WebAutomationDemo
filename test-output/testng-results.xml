@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="8917" started-at="2021-02-12T21:05:33 NZDT" finished-at="2021-02-12T21:05:42 NZDT">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="8917" started-at="2021-02-12T21:05:33 NZDT" finished-at="2021-02-12T21:05:42 NZDT">
+      <class name="base.BaseTest">
+        <test-method status="PASS" signature="getProperties(java.lang.String, java.lang.String)[pri:0, instance:base.BaseTest@21680803]" name="getProperties" is-config="true" duration-ms="51" started-at="2021-02-12T21:05:33 NZDT" finished-at="2021-02-12T21:05:33 NZDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[src/test/resources/config/config.properties]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[src/test/resources/log4j.properties]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getProperties -->
+        <test-method status="PASS" signature="initBrowser(java.lang.String)[pri:0, instance:base.BaseTest@21680803]" name="initBrowser" duration-ms="8053" started-at="2021-02-12T21:05:33 NZDT" finished-at="2021-02-12T21:05:42 NZDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initBrowser -->
+        <test-method status="PASS" signature="closeDriver()[pri:0, instance:base.BaseTest@21680803]" name="closeDriver" is-config="true" duration-ms="353" started-at="2021-02-12T21:05:42 NZDT" finished-at="2021-02-12T21:05:42 NZDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+      </class> <!-- base.BaseTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -34,7 +34,7 @@ public class PropertiesReader {
 		BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
 		
 		PROPERTIES.load(bufferedReader);
-		log.info(String.format("====read properties file: %s ====", propertiesPath));
+		//log.info(String.format("====read properties file: %s ====", propertiesPath));
 		
 		return PROPERTIES;		
 	}
