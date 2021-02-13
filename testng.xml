@@ -4,16 +4,16 @@
 
 	<parameter name="propertiesPath" value="src/test/resources/config/config.properties" />
 	<parameter name="log4jConPath" value="src/test/resources/log4j.properties"/>	
+	<parameter name="accountConfigPath" value="src/test/resources/config/account.properties"/>	
 	<parameter name="browserName" value="chrome"/>
 
 	<listeners>
 		<listener class-name="listener.TestLogListener" />
-		<listener class-name="listener.FailedRetryListener" />
 	</listeners>
 	 
 	<test name="test with chrome">
 	    <classes>
-	      <class name="testcases.LoginPageTest"/>
+	      <class name="testcases.AddVisitorTest"/>
 	    </classes>	  
 	  </test> <!-- Test -->	 
 </suite> 

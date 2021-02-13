@@ -20,7 +20,7 @@ private static Logger log = LoggerFactory.getLogger(FailedRetryRunner.class);
 	private int retryCount = 0;
 	
 	// get 'maxRetryCount' from config.properties file
-	private static final int maxRetryCount = Integer.parseInt(PropertiesReader.getKey("conf.maxRetryCount"));
+	private static final int maxRetryCount = Integer.parseInt(PropertiesReader.getKey("driver.maxRetryCount"));
 
 	public boolean retry(ITestResult iTestResult) {
 		if (retryCount < maxRetryCount) {

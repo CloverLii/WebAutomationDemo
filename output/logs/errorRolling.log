@@ -1,0 +1,116 @@
+2021-02-12 23:28:04  [listener.TestLogListener]-[ERROR] ====[testcases.LoginTest.testLogin] test failed, because ：
+java.lang.NullPointerException====
+2021-02-13 00:23:57  [listener.TestLogListener]-[ERROR] ====[testcases.LoginTest.testLogin] test failed, because ：
+java.lang.NullPointerException====
+2021-02-13 00:25:03  [listener.TestLogListener]-[ERROR] ====[testcases.LoginTest.testLogin] test failed, because ：
+java.lang.NullPointerException====
+2021-02-13 00:31:51  [listener.TestLogListener]-[ERROR] ====[testcases.LoginTest.testLogin] test failed, because ：
+java.lang.NullPointerException====
+2021-02-13 00:35:03  [listener.TestLogListener]-[ERROR] ====[testcases.LoginTest.testLogin] test failed, because ：
+java.lang.NullPointerException====
+2021-02-13 00:46:06  [listener.TestLogListener]-[ERROR] ====[testcases.LoginTest.testLogin] test failed, because ：
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //input[@type='text'] (tried for 6 second(s) with 500 milliseconds interval)====
+2021-02-13 00:49:58  [listener.TestLogListener]-[ERROR] ====[testcases.LoginTest.testLogin] test failed, because ：
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //input[@class='el-input_inner'][1] (tried for 6 second(s) with 500 milliseconds interval)====
+2021-02-13 00:50:38  [listener.TestLogListener]-[ERROR] ====[testcases.LoginTest.testLogin] test failed, because ：
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //input[@type='password'] (tried for 6 second(s) with 500 milliseconds interval)====
+2021-02-13 01:01:51  [listener.TestLogListener]-[ERROR] ====[testcases.LoginTest.testLogin] test failed, because ：
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"link text","selector":"Login"}
+  (Session info: chrome=88.0.4324.150)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.0.0-alpha-7', revision: 'de8579b6d5'
+System info: host: 'Clovers-MBP.fritz.box', ip: 'fd00:0:0:0:4812:5b7:771c:6ec', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.150, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: /var/folders/2m/55tfmpm53tn...}, goog:chromeOptions: {debuggerAddress: localhost:54393}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b4d01fcd07d86e4f9999e0501757ccb1
+*** Element info: {Using=link text, value=Login}====
+2021-02-13 01:04:28  [listener.TestLogListener]-[ERROR] ====[testcases.LoginTest.testLogin] test failed, because ：
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"link text","selector":"Login"}
+  (Session info: chrome=88.0.4324.150)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.0.0-alpha-7', revision: 'de8579b6d5'
+System info: host: 'Clovers-MBP.fritz.box', ip: 'fd00:0:0:0:4812:5b7:771c:6ec', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.150, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: /var/folders/2m/55tfmpm53tn...}, goog:chromeOptions: {debuggerAddress: localhost:55128}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 2290f0d4ef84261dbf2186a5458b311a
+*** Element info: {Using=link text, value=Login}====
+2021-02-13 01:08:32  [listener.TestLogListener]-[ERROR] ====[testcases.LoginTest.testLogin] test failed, because ：
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"link text","selector":"Login"}
+  (Session info: chrome=88.0.4324.150)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.0.0-alpha-7', revision: 'de8579b6d5'
+System info: host: 'Clovers-MBP.fritz.box', ip: 'fd00:0:0:0:4812:5b7:771c:6ec', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.150, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: /var/folders/2m/55tfmpm53tn...}, goog:chromeOptions: {debuggerAddress: localhost:56204}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 8bf99f640ef06e00a6e3ce9d563c3c40
+*** Element info: {Using=link text, value=Login}====
+2021-02-13 01:09:50  [listener.TestLogListener]-[ERROR] ====[testcases.LoginTest.testLogin] test failed, because ：
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"partial link text","selector":"Login"}
+  (Session info: chrome=88.0.4324.150)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.0.0-alpha-7', revision: 'de8579b6d5'
+System info: host: 'Clovers-MBP.fritz.box', ip: 'fd00:0:0:0:4812:5b7:771c:6ec', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.150, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: /var/folders/2m/55tfmpm53tn...}, goog:chromeOptions: {debuggerAddress: localhost:56597}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: bd13f5310d3464324f4be289f6f8548b
+*** Element info: {Using=partial link text, value=Login}====
+2021-02-13 01:11:03  [listener.TestLogListener]-[ERROR] ====[testcases.LoginTest.testLogin] test failed, because ：
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@type='text']"}
+  (Session info: chrome=88.0.4324.150)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.0.0-alpha-7', revision: 'de8579b6d5'
+System info: host: 'Clovers-MBP.fritz.box', ip: 'fd00:0:0:0:4812:5b7:771c:6ec', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.150, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: /var/folders/2m/55tfmpm53tn...}, goog:chromeOptions: {debuggerAddress: localhost:56972}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d1e930c80c7a9e12a0d7129e5baacf9b
+*** Element info: {Using=xpath, value=//input[@type='text']}====
+2021-02-13 01:12:11  [listener.TestLogListener]-[ERROR] ====[testcases.LoginTest.testLogin] test failed, because ：
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@type='text']"}
+  (Session info: chrome=88.0.4324.150)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.0.0-alpha-7', revision: 'de8579b6d5'
+System info: host: 'Clovers-MBP.fritz.box', ip: 'fd00:0:0:0:4812:5b7:771c:6ec', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.150, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: /var/folders/2m/55tfmpm53tn...}, goog:chromeOptions: {debuggerAddress: localhost:57324}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 2c202a475e2260572e523fcab6c2275f
+*** Element info: {Using=xpath, value=//input[@type='text']}====
+2021-02-13 10:45:14  [listener.TestLogListener]-[ERROR] ====[testcases.LoginTest.testLogin] test failed, because ：
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@type='text']"}
+  (Session info: chrome=88.0.4324.150)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.0.0-alpha-7', revision: 'de8579b6d5'
+System info: host: 'Clovers-MBP.fritz.box', ip: 'fd00:0:0:0:4812:5b7:771c:6ec', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.150, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: /var/folders/2m/55tfmpm53tn...}, goog:chromeOptions: {debuggerAddress: localhost:59582}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9e8d30936d4d86b4e7c2af3a8340e68b
+*** Element info: {Using=xpath, value=//input[@type='text']}====
+2021-02-13 10:58:30  [listener.TestLogListener]-[ERROR] ====[testcases.LoginTest.testLogin] test failed, because ：
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@type='text']"}
+  (Session info: chrome=88.0.4324.150)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.0.0-alpha-7', revision: 'de8579b6d5'
+System info: host: 'Clovers-MBP.fritz.box', ip: 'fd00:0:0:0:4812:5b7:771c:6ec', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.150, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: /var/folders/2m/55tfmpm53tn...}, goog:chromeOptions: {debuggerAddress: localhost:62920}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: ccea13ea8022ae713ef9bb5239f53d2a
+*** Element info: {Using=xpath, value=//input[@type='text']}====
+2021-02-13 11:02:04  [listener.TestLogListener]-[ERROR] ====[testcases.LoginTest.testLogin] test failed, because ：
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@type='text']"}
+  (Session info: chrome=88.0.4324.150)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.0.0-alpha-7', revision: 'de8579b6d5'
+System info: host: 'Clovers-MBP.fritz.box', ip: 'fd00:0:0:0:4812:5b7:771c:6ec', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.150, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: /var/folders/2m/55tfmpm53tn...}, goog:chromeOptions: {debuggerAddress: localhost:63862}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 188130333ac4d33f63fa791cde678756
+*** Element info: {Using=xpath, value=//input[@type='text']}====
+2021-02-13 11:03:57  [listener.TestLogListener]-[ERROR] ====[testcases.LoginTest.testLogin] test failed, because ：
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@type='text']"}
+  (Session info: chrome=88.0.4324.150)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.0.0-alpha-7', revision: 'de8579b6d5'
+System info: host: 'Clovers-MBP.fritz.box', ip: 'fd00:0:0:0:4812:5b7:771c:6ec', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.150, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: /var/folders/2m/55tfmpm53tn...}, goog:chromeOptions: {debuggerAddress: localhost:64390}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 2b0eb316dd4c4cbe42befa6038ce9d31
+*** Element info: {Using=xpath, value=//input[@type='text']}====

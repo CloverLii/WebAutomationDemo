@@ -5,16 +5,21 @@ import java.time.Duration;
 
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import pom.pages.LoginPage;
+import pom.pages.MainPage;
 import util.PropertiesReader;
 
 /**
@@ -27,47 +32,64 @@ public class BaseTest {
 	private static Logger log = LoggerFactory.getLogger(BaseTest.class);
 	
 	BaseDriver baseDriver;
-	WebDriver driver;
-	WebDriverWait wait;
+	public WebDriver driver;
 	
 	
 	public BaseTest() {
 		baseDriver = new BaseDriver();
 	}
 
-	@BeforeTest
-	@Parameters({"propertiesPath", "log4jConPath"})
-	private void getProperties(@Optional("src/test/resources/config/config.properties") String propertiesPath,
-							  @Optional("src/test/resources/log4j.properties") String log4jConPath) throws IOException {
+	@BeforeSuite(alwaysRun = true)
+	@Parameters({"propertiesPath", "log4jConPath", "accountConfigPath"})
+	public void getProperties(@Optional("src/test/resources/config/config.properties") String propertiesPath,
+							  @Optional("src/test/resources/log4j.properties") String log4jConPath,
+							  @Optional("src/test/resources/config/account.properties")String accountConfigPath) throws IOException {
 		
-		//log.info("====BeforeTest: read properties files====");
+		log.info("====BeforeSuite: read properties files====");
 		PropertiesReader.readProperties(propertiesPath);
+		PropertiesReader.readProperties(accountConfigPath);
 		//PropertiesReader.readProperties(log4jConPath);
 		PropertyConfigurator.configure(log4jConPath);
 	}
 	
-	@Test
-	//@BeforeClass(alwaysRun = true)
+
+	@BeforeTest(alwaysRun = true)
 	@Parameters({"browserName"})
 	public void initBrowser(@Optional("chrome") String browserName) throws IOException {		
-		
+		log.info("==== BeforeTest: initialize browser ====");
 		String host = PropertiesReader.getKey("driver.host");
-
 		driver = baseDriver.initDriver(browserName);
-	
-		int wait1 = Integer.parseInt(PropertiesReader.getKey("driver.timeouts.webDriverWait"));
-		long implicitWait = Long.parseLong(PropertiesReader.getKey("driver.timeouts.implicitWait"));
-		
-		wait = new WebDriverWait(driver, Duration.ofSeconds(wait1));
+
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		//driver.manage().timeouts().implicitlyWait(implicitWait, TimeUnit.SECONDS);
-		driver.get(host);				
+		driver.get(host);	
+		//driver.get("https://www.swipedon.com/");
+	}
+	
+	@BeforeClass (alwaysRun = true)
+	public void loginAsAdmin(){
+		
+		String email = PropertiesReader.getKey("login.email");
+		String pwd = PropertiesReader.getKey("login.password");
+		log.info("==== BeforeClass: login with valid email [%s] and password [%s] ====", email, pwd);
+			
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.isLoginPage();		
+		loginPage.login(email, pwd);
+		getPageInfo();
+	}
+	
+	public void getPageInfo() {
+		log.info("==== current url: %s", driver.getCurrentUrl());
+		log.info("==== current page title: %s", driver.getTitle());
 	}
 	
 	
-	@AfterTest(alwaysRun = true)
+	@AfterSuite(alwaysRun = true)
 	public void closeDriver() {
-		baseDriver.closeDriver();
+		log.info("==== AfterSuite: close driver ====");
+		driver.close();
+		//baseDriver.closeDriver();
 	}
 }
