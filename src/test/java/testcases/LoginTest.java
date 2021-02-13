@@ -14,7 +14,7 @@ public class LoginTest extends BaseTest{
 	private static Logger log = LoggerFactory.getLogger(LoginTest.class);
 	LoginPage loginPage;
 	
-	@Test(description = " Login with valid account", priority = 1)
+	//@Test(description = " Login with valid account", priority = 1)
 	public void testLogin() {
 		
 		loginPage = new LoginPage(driver);

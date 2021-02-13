@@ -68,11 +68,12 @@ public class BaseTest {
 	}
 	
 	@BeforeClass (alwaysRun = true)
+	@Test
 	public void loginAsAdmin(){
 		
 		String email = PropertiesReader.getKey("login.email");
 		String pwd = PropertiesReader.getKey("login.password");
-		log.info("==== BeforeClass: login with valid email [%s] and password [%s] ====", email, pwd);
+		log.info(String.format("==== BeforeClass: login with valid email [%s] and password [%s] ====", email, pwd));
 			
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.isLoginPage();		
@@ -89,7 +90,8 @@ public class BaseTest {
 	@AfterSuite(alwaysRun = true)
 	public void closeDriver() {
 		log.info("==== AfterSuite: close driver ====");
-		driver.close();
-		//baseDriver.closeDriver();
+		if(driver != null) {
+			driver.close();
+		}
 	}
 }

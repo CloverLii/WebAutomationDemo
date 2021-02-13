@@ -14,7 +14,7 @@ public class LoginPage extends BasePage{
 	}
 	
 	private WebElement emailInput = driver.findElement(By.xpath("//input[@type='text']")) ;
-	private WebElement passwordInput = driver.findElement(By.xpath("//input[@type='password']"));
+	private WebElement passwordInput = driver.findElement(By.xpath("//div/input[@type='password']"));
 	private WebElement loginBtn = driver.findElement(By.xpath("//div/button[@type='button']"));
 	private WebElement resetPwdLink = driver.findElement(By.partialLinkText("Reset your password"));
 	
