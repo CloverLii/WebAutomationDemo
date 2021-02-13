@@ -66,11 +66,24 @@ public class BaseTest {
 		driver.get(host);	
 		//driver.get("https://www.swipedon.com/");
 	}
+	
+	@BeforeClass(alwaysRun = true)
+	public void testLogin() {
+		
+		LoginPage loginPage = new LoginPage(driver);
+		getPageInfo();
+		
+		String email = PropertiesReader.getKey("login.email");
+		String pwd = PropertiesReader.getKey("login.password");
+		log.info(String.format("==== login with valid account: email= %s, password= %s ====", email, pwd));
+				
+		loginPage.login(email, pwd);
+		getPageInfo();
+	}
 
 	
 	public void getPageInfo() {
-		log.info("==== current url: %s", driver.getCurrentUrl());
-		log.info("==== current page title: %s", driver.getTitle());
+		log.info(String.format("==== current url: %s, page title: %s", driver.getCurrentUrl(), driver.getTitle()));
 	}
 	
 	

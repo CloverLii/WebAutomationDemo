@@ -47,9 +47,10 @@ public class BasePage {
         return clickableEle;
     }
     
-    public void clickElement(WebElement ele) {
+    public WebElement clickElement(WebElement ele) {
     	 wait.until(ExpectedConditions.elementToBeClickable(ele));
          ele.click();
+         return ele;
     }
     
     public WebElement sendInput(By locator, String content) {

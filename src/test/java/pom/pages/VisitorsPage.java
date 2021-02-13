@@ -30,9 +30,9 @@ public class VisitorsPage extends BasePage{
 	
 	private WebElement addBtn = super.locateElement(By.id("addNewVisitor"));
 	
-	private WebElement cancelBtn = super.locateElement(By.linkText("Cancel"));
+	//private WebElement cancelBtn = super.locateElement(By.linkText("Cancel"));
 	// a label showing the count of visitors
-	private WebElement visitorsCount = super.locateElement(By.cssSelector(".selection-total-count"));
+	//private WebElement visitorsCount = super.locateElement(By.cssSelector(".selection-total-count"));
 	
 	
 	
@@ -40,22 +40,23 @@ public class VisitorsPage extends BasePage{
 		
 	}
 	
-	public void addVisitor() {
-		super.clickElement(tab_timeline);
+	public void addVisitor(String name, String company) {
+		//super.clickElement(tab_timeline);
 		super.clickElement(addVisitorBtn);
 		
-		String name = DataBuilder.newVisitorName();
-		String company = DataBuilder.newCompany();
 		super.sendInput(newVisitorName, name);
 		super.sendInput(newVisitorCompany, company);		
-		
 		super.clickElement(addBtn);
 	}
 	
-	public int getVisitorsCount() {		
-		int visitorsNum = Integer.parseInt(visitorsCount.getText());
-		return visitorsNum;
+//	public int getVisitorsCount() {	
+//		super.clickElement(tab_visitors);
+//		int visitorsNum = Integer.parseInt(visitorsCount.getText());
+//		return visitorsNum;
+//	}
+	
+	public boolean isVisitorsPage() {
+		
+		return true;
 	}
-	
-	
 }

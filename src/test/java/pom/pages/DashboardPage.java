@@ -27,13 +27,15 @@ public class DashboardPage extends BasePage{
 	
 	public EmployeesPage enterEmployees() {
 		super.clickElement(employees);
-		return null;
+		return new EmployeesPage(driver);
 	}
 	
 	public boolean isDashboard() {
-		driver.getTitle();
-		System.out.println("==== open Dashboard Page successfully ====" + driver.getTitle());
-		return true;
+		if(dashboard.isDisplayed()) {
+			return true;
+		}else {
+			return false;
+		}
 	}
 	
 }

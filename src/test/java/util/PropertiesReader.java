@@ -42,7 +42,7 @@ public class PropertiesReader {
 	// get value of property
 	public static String getKey(String key) {
 		String propertyValue = PROPERTIES.getProperty(key);
-		log.info(String.format("====get value of {%s} from properties file: %s ====", key, propertyValue));
+		//log.info(String.format("====get value of {%s} from properties file: %s ====", key, propertyValue));
 		
 		return propertyValue;
 	}

@@ -23,7 +23,8 @@ public class LoginTest extends BaseTest{
 		String pwd = PropertiesReader.getKey("login.password");
 		log.info(String.format("==== login with valid account: email= %s, password= %s ====", email, pwd));
 				
-		loginPage.login(email, pwd);		
+		loginPage.login(email, pwd);
+		super.getPageInfo();
 	}
 	
 	public void testLoginwithoutEmail() {
