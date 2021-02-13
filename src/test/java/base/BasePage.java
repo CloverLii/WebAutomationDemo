@@ -36,7 +36,7 @@ public class BasePage {
         return wait.until(ExpectedConditions.presenceOfElementLocated(locator));
     }
     
-    public List<WebElement> findElements(By locator){
+    public List<WebElement> locateElements(By locator){
     	return wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(locator));
     }
     
@@ -57,6 +57,11 @@ public class BasePage {
         inputElement.clear();
         inputElement.sendKeys(content);
         return inputElement;
+    }
+    
+    public void sendInput(WebElement ele, CharSequence... content) {
+        ele.clear();
+        ele.sendKeys(content);
     }
 
 }

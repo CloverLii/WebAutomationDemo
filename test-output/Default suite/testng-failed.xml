@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <parameter name="accountConfigPath" value="src/test/resources/config/account.properties"/>
-  <parameter name="log4jConPath" value="src/test/resources/log4j.properties"/>
-  <parameter name="browserName" value="chrome"/>
-  <parameter name="propertiesPath" value="src/test/resources/config/config.properties"/>
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="base.BaseTest">
+      <class name="testcases.LoginTest">
         <methods>
+          <include name="testLogin"/>
           <include name="getProperties"/>
           <include name="initBrowser"/>
           <include name="loginAsAdmin"/>
           <include name="loginAsAdmin"/>
           <include name="closeDriver"/>
         </methods>
-      </class> <!-- base.BaseTest -->
+      </class> <!-- testcases.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

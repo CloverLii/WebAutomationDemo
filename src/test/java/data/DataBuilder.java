@@ -15,6 +15,11 @@ public class DataBuilder {
 		return ( "visitor " + RandomUtil.getRandom(numberLength, false));
 	}
 	
+	public static String newEmloyeeName() {
+		int numberLength = new Random().nextInt(3) + 1;
+		return ( "employee  " + RandomUtil.getRandom(numberLength, false));
+	}
+	
 	public static String newCompany() {
 		int numberLength = new Random().nextInt(3) + 1;
 		return ( "company " + RandomUtil.getRandom(numberLength, false));
