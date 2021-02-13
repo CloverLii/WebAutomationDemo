@@ -1,7 +1,9 @@
 package util;
 
 import org.testng.ITestResult;
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import java.io.File;
 import java.io.IOException;
@@ -31,7 +33,7 @@ public class ScreenshotUtil {
 
     public static void capture(ITestResult iTestResult) {
       
-        WebDriver driver = ((BaseTest)iTestResult.getInstance()).driver;
+        WebDriver driver = (WebDriver) iTestResult.getInstance();
 
         File screenshotDir = new File(SCREENSHOT_PATH);
         // create directory if not exist
