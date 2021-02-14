@@ -1,11 +1,9 @@
 package testcases;
 
-import org.openqa.selenium.WebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 
-import base.BasePage;
 import base.BaseTest;
 import data.DataBuilder;
 import pom.pages.DashboardPage;
