@@ -10,15 +10,15 @@
   </listeners>
   <test thread-count="5" name="test with chrome(failed)">
     <classes>
-      <class name="testcases.AddVisitorTest">
+      <class name="testcases.AddEmployeeTest">
         <methods>
-          <include name="addVisitor"/>
+          <include name="addEmployeeTest"/>
           <include name="testLogin"/>
           <include name="getProperties"/>
           <include name="initBrowser"/>
           <include name="closeDriver"/>
         </methods>
-      </class> <!-- testcases.AddVisitorTest -->
+      </class> <!-- testcases.AddEmployeeTest -->
     </classes>
   </test> <!-- test with chrome(failed) -->
 </suite> <!-- Failed suite [Web UI Test Suite 1] -->

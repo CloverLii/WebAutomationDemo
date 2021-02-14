@@ -14,10 +14,10 @@ public class EmployeesPage extends BasePage {
 	private WebElement tab_timeline = super.locateElement(By.xpath("//a[@href='/employees/timeline']/h4"));
 	private WebElement tab_archive = super.locateElement(By.xpath("//a[@href='/employees/archive']/h4"));
 	
-	private WebElement addEmployeeMenu = super.locateElement(By.cssSelector(".dropdown-toggle"));	
-	private WebElement addEmployee = super.locateElement(By.linkText("Add Employee"));
-	private WebElement addInBulk = super.locateElement(By.linkText("Add in Bulk"));;
-	private WebElement addViaIntegration = super.locateElement(By.linkText("Add via Integration"));
+	private WebElement addEmployeeMenu = super.locateElement(By.cssSelector(".ghost-btn > .dropdown-toggle > strong"));	
+	private WebElement addEmployee = super.locateElement(By.cssSelector("li > .popup-form-add-employee"));
+	//private WebElement addInBulk = super.locateElement(By.cssSelector("li > .popup-form-add-employee"));;
+	//private WebElement addViaIntegration = super.locateElement(By.cssSelector("li > .popup-form-add-employee"));
 	
 	// ========================== elements for new employee ===================================
 	private WebElement newEmployeeFirstName = super.locateElement(By.id("User_first_name"));	
@@ -26,17 +26,17 @@ public class EmployeesPage extends BasePage {
 	private WebElement newEmployeeEmail = super.locateElement(By.id("User_email")); 	
 	
 	private WebElement newEmployeePhone = super.locateElement(By.id("User_phone"));
-	private List<WebElement> elementsList = super.locateElements(By.cssSelector("div>.iti_selected-flag")); // select
-	private WebElement newEmployeePhoneCountry = elementsList.get(0);
+	//private List<WebElement> elementsList = super.locateElements(By.cssSelector("div>.iti_selected-flag")); // select
+	//private WebElement newEmployeePhoneCountry = elementsList.get(0);
 	
 	private WebElement newEmployeeLocation = super.locateElement(By.id("User_location_id")); // select
 	
 	private WebElement newEmployeeCCEmail = super.locateElement(By.id("User_email_cc"));
 	private WebElement newEmployeeCCSMS = super.locateElement(By.id("User_phone_cc"));
-	private WebElement newEmployeeCCSMSCountry = newEmployeePhoneCountry = elementsList.get(1); // select
+	//private WebElement newEmployeeCCSMSCountry = newEmployeePhoneCountry = elementsList.get(1); // select
 	
 	private WebElement addBtn = super.locateElement(By.id("addNewEmployee"));
-	private WebElement cancalBtn = super.locateElement(By.linkText("Cancal"));
+	//private WebElement cancalBtn = super.locateElement(By.linkText("Cancal"));
 	
 	// locate [Sign In] button according employee Name
 	private WebElement getSignInBtnByName(String employeeName) {
@@ -51,9 +51,11 @@ public class EmployeesPage extends BasePage {
 	}
 	
 	public void addEmployee(String fName, String email) {
+	
 		super.clickElement(addEmployeeMenu);
 		super.clickElement(addEmployee);
 		super.sendInput(newEmployeeFirstName, fName);
+		//super.sendInput(newEmployeeLastName, lName);
 		super.sendInput(newEmployeeEmail, email);
 		super.clickElement(addBtn);
 	}
