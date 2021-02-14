@@ -23,12 +23,8 @@ src/test/java:
 - util/ PropertiesReader, RandomUtil, ScreenshotUtil
 
 src/test/resources:
-- config
-  - config.properties
-  - account.properties
-- driver
-  - chromedriver
-  - geckodriver
+- config/ config.properties, account.properties
+- driver/ chromedriver, geckodriver
 - allure.properties
 - log4j.properties
 
@@ -39,3 +35,13 @@ output:
 pom.xml
 
 testng.xml
+
+**How to use:**
+
+1. clone or download the source code to local machine
+2. install and configure maven on local machine
+3. execute "mvn clean test" for building
+4. select "testng.xml" in the root path and run as "TESTNG Suite"
+5. install and configure allure on local machine
+6. execute "allure generate allure-results --clean -o allure-report" for allure report
+7. open the report file using browser
