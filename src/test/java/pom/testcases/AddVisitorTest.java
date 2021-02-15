@@ -7,6 +7,9 @@ import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 import base.BaseTest;
 import data.DataBuilder;
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 import pom.pages.DashboardPage;
 import pom.pages.VisitorsPage;
 
@@ -17,6 +20,8 @@ import pom.pages.VisitorsPage;
  * @date 16/02/2021
  *
  */
+
+@Epic("Add new visitor")
 public class AddVisitorTest extends BaseTest{
 	
 	private static Logger log = LoggerFactory.getLogger(LoginTest.class);
@@ -24,7 +29,9 @@ public class AddVisitorTest extends BaseTest{
 	DashboardPage dashboardPage;
 	VisitorsPage visitorsPage;
 	
-	@Test(description = "Add new visitor with required values", priority = 1 )
+	@Test(description = "Add new visitor with required values", priority = 1, groups = {"positive"})
+	@Feature("Add new visitor with required values")
+	@Description("Add new visitor with valid name and company")
 	public void addVisitor() {
 		
 		dashboardPage = new DashboardPage(driver);		
@@ -47,7 +54,9 @@ public class AddVisitorTest extends BaseTest{
 		//assertEquals(currentCount, originalCount+1);		
 	}
 	
-	@Test(description = "Add new visitor with all values", priority = 2)
+	@Test(description = "Add new visitor with all values", priority = 2, groups = {"positive, regression"})
+	@Feature("Add new visitor with all values")
+	@Description("Add new visitor with name, company, location and host")
 	public void addVisitor2() {
 		
 		log.info("==== add new visitor with all values ====");			
