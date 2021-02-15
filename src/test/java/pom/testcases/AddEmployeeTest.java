@@ -33,12 +33,12 @@ public class AddEmployeeTest  extends BaseTest {
 		
 		dashboardPage = new DashboardPage(driver);
 		
-		log.info("===== enter Employees Page");
+		log.info("===== enter Employees Page ====");
 		employeePage = dashboardPage.enterEmployees();
 		super.getPageInfo();
 		
 		prepareData();
-		log.info(String.format("==== add new employee: fName=%s, email=%s", firstName, email));
+		log.info(String.format("==== add new employee: fName=%s, email=%s ====", firstName, email));
 		employeePage.addEmployee(firstName, email);
 	}
 	
