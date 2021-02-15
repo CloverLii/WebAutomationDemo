@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import base.BasePage;
+import data.PageURL;
 
 /**
  * 
@@ -20,13 +21,20 @@ public class DashboardPage extends BasePage{
 		// TODO Auto-generated constructor stub
 	}
 	
-	/* ============== items on the left side of the screen ======================= */
+	/* ============== entries to different pages (left side items) ======================= */
 	private WebElement dashboard = super.locateElement(By.linkText("Dashboard"));
 	private WebElement visitors = super.locateElement(By.linkText("Visitors"));
 	private WebElement employees= super.locateElement(By.linkText("Employees"));
 	private WebElement deliveries = super.locateElement(By.linkText("Deliveries"));
+	private WebElement evacuation = super.locateElement(By.linkText("Evacuation"));
+	
+	/* ============== number of visitors-in, pre-registered and deliveries ============= */
+	private WebElement visitorsInNum = super.locateElement(By.cssSelector("a[href='/visitors#signedIn'] > h2 > strong"));
+	private WebElement preregisteredNum = super.locateElement(By.cssSelector("a[href='/preRegistration'] > h2 > strong"));
+	private WebElement deliveriesNum = super.locateElement(By.cssSelector("a[href='/deliveries'] > strong"));
 	
 	
+	/* =========== navigate to different pages ================== */
 	public VisitorsPage enterVisitors() {
 		super.clickElement(visitors);
 		return new VisitorsPage(driver);
@@ -42,8 +50,22 @@ public class DashboardPage extends BasePage{
 		return new DashboardPage(driver);
 	}
 	
+	public void enterDeliveries() {}
+	
+	public void enterPreRegistration() {}
+	
+	public void enterEvacuation() {}
+	
+	public void enterDevices() {}
+	
+	public void enterAdminRoles() {}
+	
+	public void enterIntegration() {}
+	
+	public void enterAccount() {}
+	
 	public boolean isDashboard() {
-		if(dashboard.isDisplayed()) {
+		if(driver.getCurrentUrl().equals(PageURL.DASHBOARD_PAGE)) {
 			return true;
 		}else {
 			return false;

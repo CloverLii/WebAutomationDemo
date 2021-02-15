@@ -30,6 +30,5 @@ public class PageURL {
 	
 	public static String ACCOUNT_PAGE = "https://secure.swipedon.com/account/plans";
 	
-	
-	
+	//TODO: add remaining page urls	
 }
