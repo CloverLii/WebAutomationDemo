@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="20875" started-at="2021-02-14T17:21:03 NZDT" finished-at="2021-02-14T17:21:24 NZDT">
+  <suite name="Default suite" duration-ms="24408" started-at="2021-02-15T08:21:12 NZDT" finished-at="2021-02-15T08:21:37 NZDT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="20875" started-at="2021-02-14T17:21:03 NZDT" finished-at="2021-02-14T17:21:24 NZDT">
+    <test name="Default test" duration-ms="24408" started-at="2021-02-15T08:21:12 NZDT" finished-at="2021-02-15T08:21:37 NZDT">
       <class name="testcases.AddEmployeeTest">
-        <test-method status="PASS" signature="getProperties(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.AddEmployeeTest@5851bd4f]" name="getProperties" is-config="true" duration-ms="61" started-at="2021-02-14T17:21:03 NZDT" finished-at="2021-02-14T17:21:03 NZDT">
+        <test-method status="PASS" signature="getProperties(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.AddEmployeeTest@1d572e62]" name="getProperties" is-config="true" duration-ms="74" started-at="2021-02-15T08:21:12 NZDT" finished-at="2021-02-15T08:21:12 NZDT">
           <params>
             <param index="0">
               <value>
@@ -28,7 +28,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getProperties -->
-        <test-method status="PASS" signature="initBrowser(java.lang.String)[pri:0, instance:testcases.AddEmployeeTest@5851bd4f]" name="initBrowser" is-config="true" duration-ms="7400" started-at="2021-02-14T17:21:03 NZDT" finished-at="2021-02-14T17:21:10 NZDT">
+        <test-method status="PASS" signature="initBrowser(java.lang.String)[pri:0, instance:testcases.AddEmployeeTest@1d572e62]" name="initBrowser" is-config="true" duration-ms="10919" started-at="2021-02-15T08:21:12 NZDT" finished-at="2021-02-15T08:21:23 NZDT">
           <params>
             <param index="0">
               <value>
@@ -39,15 +39,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initBrowser -->
-        <test-method status="PASS" signature="testLogin()[pri:0, instance:testcases.AddEmployeeTest@5851bd4f]" name="testLogin" is-config="true" duration-ms="757" started-at="2021-02-14T17:21:10 NZDT" finished-at="2021-02-14T17:21:11 NZDT">
+        <test-method status="PASS" signature="testLogin()[pri:0, instance:testcases.AddEmployeeTest@1d572e62]" name="testLogin" is-config="true" duration-ms="838" started-at="2021-02-15T08:21:23 NZDT" finished-at="2021-02-15T08:21:24 NZDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogin -->
-        <test-method status="PASS" signature="addEmployeeTest()[pri:0, instance:testcases.AddEmployeeTest@5851bd4f]" name="addEmployeeTest" duration-ms="12539" started-at="2021-02-14T17:21:11 NZDT" description="Add new employee with first name and email" finished-at="2021-02-14T17:21:23 NZDT">
+        <test-method status="PASS" signature="addEmployeeTest()[pri:0, instance:testcases.AddEmployeeTest@1d572e62]" name="addEmployeeTest" duration-ms="12437" started-at="2021-02-15T08:21:24 NZDT" description="Add new employee with first name and email" finished-at="2021-02-15T08:21:37 NZDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addEmployeeTest -->
-        <test-method status="PASS" signature="closeDriver()[pri:0, instance:testcases.AddEmployeeTest@5851bd4f]" name="closeDriver" is-config="true" duration-ms="385" started-at="2021-02-14T17:21:24 NZDT" finished-at="2021-02-14T17:21:24 NZDT">
+        <test-method status="PASS" signature="closeDriver()[pri:0, instance:testcases.AddEmployeeTest@1d572e62]" name="closeDriver" is-config="true" duration-ms="337" started-at="2021-02-15T08:21:37 NZDT" finished-at="2021-02-15T08:21:37 NZDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->
