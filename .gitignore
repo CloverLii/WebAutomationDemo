@@ -32,3 +32,4 @@ output/
 allure-results/
 screenshots/
 logs/
+test-output/
