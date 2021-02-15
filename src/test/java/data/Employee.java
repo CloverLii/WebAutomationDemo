@@ -2,15 +2,22 @@ package data;
 
 import org.testng.annotations.Optional;
 
+/**
+ * 
+ * Employee: For optional parameterization
+ * @author cloverli
+ * @date 15/02/2021
+ *
+ */
 public class Employee {
 	
 	private String employeeFirstName;
-	private String employeeLastName = "";
+	private String employeeLastName;
 	private String employeeEmail;
 	private String employeePhone;
 	private String employeeLocation;
-	private String employeeAssistantEmail;
-	private String employeeAssistantSMS;
+	private String employeeCCEmail;
+	private String employeeCCSMS;
 	
 	// constructor with all values
 	public Employee(String fName, String lName, String email, String phone, @Optional("Head Office") String location, String ccEmail,  String ccPhone) {
@@ -19,8 +26,8 @@ public class Employee {
 		this.employeeEmail = email;
 		this.employeePhone = phone;
 		this.employeeLocation = location;
-		this.employeeAssistantEmail = ccEmail;
-		this.employeeAssistantSMS = ccPhone;
+		this.employeeCCEmail = ccEmail;
+		this.employeeCCSMS = ccPhone;
 	}
 	
 	// constructor with required values
@@ -31,9 +38,9 @@ public class Employee {
 	
 	// get all information of the employee
 	public String getEmployeeInfo(Employee em) {
-		String info = String.format("Employee info: firstName=%s, lastName=%s, email=%s, phone=%s, location=%s, ccEmail=%s, ccSMS=%s ",
-				em.employeeFirstName, em.employeeLastName, em.employeeEmail, em.employeePhone, em.employeeLocation, em.employeeAssistantEmail, em.employeeAssistantSMS);
-		return info;
+		String employeeInfo = String.format("Employee info: firstName=%s, lastName=%s, email=%s, phone=%s, location=%s, ccEmail=%s, ccSMS=%s ",
+				em.employeeFirstName, em.employeeLastName, em.employeeEmail, em.employeePhone, em.employeeLocation, em.employeeCCEmail, em.employeeCCSMS);
+		return employeeInfo;
 	}
 	
 	// ================== getter =====================
@@ -58,11 +65,11 @@ public class Employee {
 	}
 	
 	public String getEmployeeCCEmail() {
-		return this.employeeAssistantEmail;
+		return this.employeeCCEmail;
 	}
 	
 	public String getEmployeeCCSMS() {
-		return this.employeeAssistantSMS;
+		return this.employeeCCSMS;
 	}
 	
 	// ===================== setter ========================
@@ -87,10 +94,10 @@ public class Employee {
 	}
 	
 	public void setEmployeeCCEmail(String ccEmail) {
-		this.employeeAssistantEmail = ccEmail;
+		this.employeeCCEmail = ccEmail;
 	}
 	
 	public void setEmployeeCCSMS(String ccSMS) {
-		this.employeeAssistantSMS = ccSMS;
+		this.employeeCCSMS = ccSMS;
 	}
 }

@@ -2,9 +2,6 @@ package util;
 
 import java.util.Random;
 
-import org.slf4j.LoggerFactory;
-import org.slf4j.Logger;
-
 /**
  * 
  * @reference https://github.com/CloverLii/ApiAutoTest/blob/master/src/main/java/com/iiaccount/utils/RandomUtil.java
@@ -13,13 +10,12 @@ import org.slf4j.Logger;
  *
  */
 public class RandomUtil {
-	
-	private static Logger log = LoggerFactory.getLogger(RandomUtil.class);
 
 	// contains all numbers and all characters
     private static String randomBase = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    // contains only numbers
     private static String randomNumberBase = "0123456789";
-    // TODO: randomBase containing special characters for certain content
+    // TODO: randomBase containing special characters
 
     private static Random random = new Random();
 

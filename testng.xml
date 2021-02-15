@@ -13,7 +13,7 @@
 	 
 	<test name="test with chrome">
 	    <classes>
-	      <class name="testcases.LoginTest"/>
+	      <class name="testcases.AddEmployeeTest"/>
 	    </classes>	  
 	  </test> <!-- Test -->	 
 </suite> 

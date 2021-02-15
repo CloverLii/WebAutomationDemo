@@ -6,16 +6,19 @@ import org.openqa.selenium.WebElement;
 
 import base.BasePage;
 
-public class DashBoardPage extends BasePage{
+public class DashboardPage extends BasePage{
 
-	public DashBoardPage(WebDriver driver) {
+	public DashboardPage(WebDriver driver) {
 		super(driver);
 		// TODO Auto-generated constructor stub
 	}
 	
-	private WebElement bashboardHome = super.locateElement(By.linkText("Dashboard"));
+	// ============== items on the left side of the screen =======================
+	private WebElement dashboard = super.locateElement(By.linkText("Dashboard"));
 	private WebElement visitors = super.locateElement(By.linkText("Visitors"));
 	private WebElement employees= super.locateElement(By.linkText("Employees"));
+	private WebElement deliveries = super.locateElement(By.linkText("Deliveries"));
+	
 	
 	public VisitorsPage enterVisitors() {
 		super.clickElement(visitors);
@@ -24,7 +27,20 @@ public class DashBoardPage extends BasePage{
 	
 	public EmployeesPage enterEmployees() {
 		super.clickElement(employees);
-		return null;
+		return new EmployeesPage(driver);
+	}
+	
+	public DashboardPage enterDashboardHome() {
+		super.clickElement(dashboard);
+		return new DashboardPage(driver);
+	}
+	
+	public boolean isDashboard() {
+		if(dashboard.isDisplayed()) {
+			return true;
+		}else {
+			return false;
+		}
 	}
 	
 }

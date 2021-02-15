@@ -13,21 +13,27 @@ public class LoginPage extends BasePage{
 		// TODO Auto-generated constructor stub
 	}
 	
-	private WebElement emailInput = driver.findElement(By.xpath("//input[@type='text']")) ;
-	private WebElement passwordInput = driver.findElement(By.xpath("//div/input[@type='password']"));
-	private WebElement loginBtn = driver.findElement(By.xpath("//div/button[@type='button']"));
-	private WebElement resetPwdLink = driver.findElement(By.partialLinkText("Reset your password"));
+	private WebElement emailInput = super.locateElement(By.cssSelector(".email .el-input__inner"));
+	
+	private WebElement passwordInput = super.locateElement(By.cssSelector(".password .el-input__inner"));
+	
+	private WebElement loginBtn = super.locateElement(By.cssSelector(".login-btn"));
+	
+	private WebElement resetPwdLink = super.locateElement(By.partialLinkText("Reset your password"));
+	
 	
 	public void login(String email, String pwd) {
-		emailInput.sendKeys(email);
-		passwordInput.sendKeys(pwd);
-		loginBtn.click();
+		super.sendInput(emailInput, email);
+		super.sendInput(passwordInput, pwd);
+		super.clickElement(loginBtn);
 	}
 	
 	public boolean isLoginPage(){
-		driver.getTitle();
-		System.out.println("==== open Login Page successfully ====" + driver.getTitle());
-		return true;
+		if(emailInput.isDisplayed()) {
+			return true;
+		}else {
+			return false;
+		}
 	}	
 	
 }

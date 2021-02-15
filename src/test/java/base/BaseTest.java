@@ -1,40 +1,36 @@
 package base;
 
 import java.io.IOException;
-import java.time.Duration;
-
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterSuite;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
 
+import pom.pages.DashboardPage;
 import pom.pages.LoginPage;
-import pom.pages.MainPage;
 import util.PropertiesReader;
 
 /**
  * 
- * @author cloverdolphin
- *s
+ * Parent Class: Commonly executed tests before/after different stage
+ * @author cloverli
+ * @date 15/02/2021
  */
 public class BaseTest {
 	
 	private static Logger log = LoggerFactory.getLogger(BaseTest.class);
 	
-	BaseDriver baseDriver;
+	private BaseDriver baseDriver;
 	public WebDriver driver;
 	
-	
+	// constructor
 	public BaseTest() {
 		baseDriver = new BaseDriver();
 	}
@@ -56,42 +52,53 @@ public class BaseTest {
 	@BeforeTest(alwaysRun = true)
 	@Parameters({"browserName"})
 	public void initBrowser(@Optional("chrome") String browserName) throws IOException {		
+		
 		log.info("==== BeforeTest: initialize browser ====");
 		String host = PropertiesReader.getKey("driver.host");
 		driver = baseDriver.initDriver(browserName);
-
+		
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		//driver.manage().timeouts().implicitlyWait(implicitWait, TimeUnit.SECONDS);
+		
 		driver.get(host);	
-		//driver.get("https://www.swipedon.com/");
 	}
 	
-	@BeforeClass (alwaysRun = true)
-	@Test
-	public void loginAsAdmin(){
+	@BeforeClass(alwaysRun = true)
+	public void testLogin() {
+		
+		log.info("==== BeforeClass: login as admin ====");
+		LoginPage loginPage = new LoginPage(driver);
+		getPageInfo();
 		
 		String email = PropertiesReader.getKey("login.email");
 		String pwd = PropertiesReader.getKey("login.password");
-		log.info(String.format("==== BeforeClass: login with valid email [%s] and password [%s] ====", email, pwd));
-			
-		LoginPage loginPage = new LoginPage(driver);
-		loginPage.isLoginPage();		
+		log.info(String.format("==== login with valid account: email= %s, password= %s ====", email, pwd));
+				
 		loginPage.login(email, pwd);
 		getPageInfo();
 	}
-	
+
+	// print current url and page title
 	public void getPageInfo() {
-		log.info("==== current url: %s", driver.getCurrentUrl());
-		log.info("==== current page title: %s", driver.getTitle());
+		log.info(String.format("==== current url: %s, page title: %s", driver.getCurrentUrl(), driver.getTitle()));
 	}
 	
+	@AfterClass(alwaysRun = true)
+	public void afterClass() {
+		log.info("==== AfterClass: back to home of Dashboard Page ====");
+		DashboardPage dashboardPage = new DashboardPage(driver);
+		dashboardPage.enterDashboardHome();
+		getPageInfo();
+	}
 	
+	// tear down after class or after suite
 	@AfterSuite(alwaysRun = true)
-	public void closeDriver() {
-		log.info("==== AfterSuite: close driver ====");
+	public void tearDown() {
+		
+		log.info("==== AfterSuite: quit driver ====");
 		if(driver != null) {
-			driver.close();
+			//driver.close(); // close the browser or page which is having the focus
+			driver.quit(); // close all browser window and end the WebDriver session
 		}
 	}
 }
