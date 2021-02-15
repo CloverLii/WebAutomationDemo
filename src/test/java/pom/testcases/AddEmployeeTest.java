@@ -24,7 +24,7 @@ public class AddEmployeeTest  extends BaseTest {
 	String email;
 	
 	private void prepareData() {
-		firstName = DataBuilder.newEmloyeeName();
+		firstName = DataBuilder.newEmloyeeFirstName();
 		email = DataBuilder.newEmail();
 	}
 	

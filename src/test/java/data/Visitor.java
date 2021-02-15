@@ -2,16 +2,19 @@ package data;
 
 /**
  * 
- * @author cloverdolphin
+ * Visitor: For optional parameterization
+ * @author cloverli
+ * @date 15/02/2021
  *
  */
 public class Visitor {
 	
-	private String visitorName = "";
-	private String visitorCompany = "";
-	private String visitorLocation = "";
-	private String visitorHost = "";
+	private String visitorName;
+	private String visitorCompany;
+	private String visitorLocation;
+	private String visitorHost;
 	
+	// constructor with all values
 	public Visitor(String vName, String vCompany, String vLocation, String vHost) {
 		this.visitorName = vName;
 		this.visitorCompany = vCompany;
@@ -19,7 +22,7 @@ public class Visitor {
 		this.visitorHost = vHost;
 	}
 	
-	// use default values when 'location' and 'host' not providing
+	// constructor with required values
 	public Visitor(String vName, String vCompany) {
 		this.visitorName = vName;
 		this.visitorCompany = vCompany;
@@ -27,8 +30,8 @@ public class Visitor {
 	
 	// get all information of the visitor
 	public String getVisitorInfo(Visitor v) {
-		String info = String.format("visitor info: name=%s, company=%s, location=%s, visiting=%s ", v.visitorName, v.visitorCompany, v.visitorLocation, v.visitorHost );
-		return info;
+		String visitorInfo = String.format("visitor info: name=%s, company=%s, location=%s, visiting=%s ", v.visitorName, v.visitorCompany, v.visitorLocation, v.visitorHost );
+		return visitorInfo;
 	}
 
 	// ===================== getter ========================
