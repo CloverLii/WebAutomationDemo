@@ -13,8 +13,6 @@ import java.util.Date;
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
 
-
-
 /**
  * Utility class: get and save a screenshot to local when test failed
  * File name: screenshot-className-currentTime.png
@@ -48,18 +46,19 @@ public class ScreenshotUtil {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy:MM:dd:HH:mm:ss");	
         String dateStr = dateFormat.format(new Date());      
         // set screenshot name
-        String screenshotName = "screenshot" + "-" + className + "-" + dateStr + screenshotFormat;
+        String screenshotName = "screenshot" + "_" + className + "_" + dateStr + screenshotFormat;
        
         try {
             // take screenshot and save to configured path
             File sourcefile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
             String outputFile = SCREENSHOT_PATH + File.separator + screenshotName;
-            System.out.println("...screenshot file name: " + outputFile);
            
             FileUtils.copyFile(sourcefile, new File(outputFile));
+            log.info(String.format("==== test fails, taks screenshot: %s", outputFile));
+            
         } catch (IOException e) {
+            log.error("==== capture screenshot fails: %s", screenshotName);
             e.printStackTrace();
-            log.error("can not file [{}] to local path", screenshotName, e);
         }
     }
 }
