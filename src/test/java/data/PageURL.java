@@ -16,6 +16,10 @@ public class PageURL {
 	
 	public static String DASHBOARD_PAGE = "https://secure.swipedon.com/";
 	
+	public static String VISITORS_PAGE = "https://secure.swipedon.com/visitors"	;
+	
+	public static String EMPLOYEES_PAGE = "https://secure.swipedon.com/employees";
+	
 	public static String DELIVERIES_PAGE = "https://secure.swipedon.com/deliveries";
 	
 	public static String PRE_REGISTRATION_PAGE = "https://secure.swipedon.com/preRegistration";

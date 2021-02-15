@@ -2,6 +2,7 @@ package base;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.Random;
 import java.util.Set;
 
 import org.openqa.selenium.By;
@@ -10,6 +11,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import util.PropertiesReader;
 
@@ -33,6 +35,15 @@ public class BasePage {
 	        this.action = new Actions(driver);
 	        long timeout = Long.parseLong(PropertiesReader.getKey("driver.timeouts.webDriverWait"));
 	        this.wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+	}
+	
+	// select random value for Select element
+	public void selectRandomValue(Select select) {
+		Random random = new Random();
+		int size = select.getOptions().size();
+		int index = random.nextInt(size);
+		select.selectByIndex(index);
+		System.out.println("**** random index of select element: " + size + index);
 	}
 	
 	// locate single element by locator
@@ -79,6 +90,14 @@ public class BasePage {
     // move to element
     public void moveToElement(By locator) {
         action.moveToElement(locateElement(locator)).perform();
+    }
+    
+    public void moveToElement(WebElement ele) {
+        action.moveToElement(ele).perform();
+    }
+    
+    public void clickElementByAction(WebElement ele) {
+        action.click(ele).perform();
     }
     
     // drag element

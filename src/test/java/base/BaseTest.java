@@ -5,15 +5,12 @@ import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
-
-import pom.pages.DashboardPage;
 import pom.pages.LoginPage;
 import util.PropertiesReader;
 
@@ -81,14 +78,6 @@ public class BaseTest {
 	// print current url and page title
 	public void getPageInfo() {
 		log.info(String.format("==== current url: %s, page title: %s", driver.getCurrentUrl(), driver.getTitle()));
-	}
-	
-	@AfterClass(alwaysRun = true)
-	public void afterClass() {
-		log.info("==== AfterClass: back to home of Dashboard Page ====");
-		DashboardPage dashboardPage = new DashboardPage(driver);
-		dashboardPage.enterDashboardHome();
-		getPageInfo();
 	}
 	
 	// tear down after class or after suite

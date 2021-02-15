@@ -25,18 +25,25 @@ public class DashboardPage extends BasePage{
 	private WebElement dashboard = super.locateElement(By.linkText("Dashboard"));
 	private WebElement visitors = super.locateElement(By.linkText("Visitors"));
 	private WebElement employees= super.locateElement(By.linkText("Employees"));
-	private WebElement deliveries = super.locateElement(By.linkText("Deliveries"));
-	private WebElement evacuation = super.locateElement(By.linkText("Evacuation"));
+	//private WebElement deliveries = super.locateElement(By.linkText("Deliveries"));
+	//private WebElement evacuation = super.locateElement(By.linkText("Evacuation"));
 	
 	/* ============== number of visitors-in, pre-registered and deliveries ============= */
-	private WebElement visitorsInNum = super.locateElement(By.cssSelector("a[href='/visitors#signedIn'] > h2 > strong"));
-	private WebElement preregisteredNum = super.locateElement(By.cssSelector("a[href='/preRegistration'] > h2 > strong"));
-	private WebElement deliveriesNum = super.locateElement(By.cssSelector("a[href='/deliveries'] > strong"));
+	private WebElement visitorsInLink = super.locateElement(By.cssSelector("a[href='/visitors#signedIn'] > h2 > strong"));
+	//private WebElement preregisteredLink = super.locateElement(By.cssSelector("a[href='/preRegistration'] > h2 > strong"));
+	//private WebElement deliveriesLink = super.locateElement(By.cssSelector("a[href='/deliveries'] > strong"));
 	
 	
 	/* =========== navigate to different pages ================== */
-	public VisitorsPage enterVisitors() {
+	// enter visitors-timeline page
+	public VisitorsPage enterTimeline() {
 		super.clickElement(visitors);
+		return new VisitorsPage(driver);
+	}
+	
+	// enter visitors-visitors page
+	public VisitorsPage enterVisitors() {
+		super.clickElement(visitorsInLink);
 		return new VisitorsPage(driver);
 	}
 	
@@ -50,19 +57,20 @@ public class DashboardPage extends BasePage{
 		return new DashboardPage(driver);
 	}
 	
-	public void enterDeliveries() {}
+	public void enterDeliveries() {}	
 	
-	public void enterPreRegistration() {}
+	public void enterPreRegistration() {}	
 	
-	public void enterEvacuation() {}
+	public void enterEvacuation() {}	
 	
-	public void enterDevices() {}
+	public void enterDevices() {}	
 	
-	public void enterAdminRoles() {}
+	public void enterAdminRoles() {}	
 	
-	public void enterIntegration() {}
+	public void enterIntegration() {}	
 	
 	public void enterAccount() {}
+
 	
 	public boolean isDashboard() {
 		if(driver.getCurrentUrl().equals(PageURL.DASHBOARD_PAGE)) {
