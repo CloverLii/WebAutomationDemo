@@ -5,27 +5,32 @@ import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
+
+import pom.pages.DashboardPage;
 import pom.pages.LoginPage;
 import util.PropertiesReader;
 
 /**
  * 
- * @author cloverdolphin
- *s
+ * Parent Class: Commonly executed tests before/after different stage
+ * @author cloverli
+ * @date 15/02/2021
  */
 public class BaseTest {
 	
 	private static Logger log = LoggerFactory.getLogger(BaseTest.class);
 	
-	BaseDriver baseDriver;
+	private BaseDriver baseDriver;
 	public WebDriver driver;
 	
+	// constructor
 	public BaseTest() {
 		baseDriver = new BaseDriver();
 	}
@@ -47,17 +52,21 @@ public class BaseTest {
 	@BeforeTest(alwaysRun = true)
 	@Parameters({"browserName"})
 	public void initBrowser(@Optional("chrome") String browserName) throws IOException {		
+		
 		log.info("==== BeforeTest: initialize browser ====");
 		String host = PropertiesReader.getKey("driver.host");
 		driver = baseDriver.initDriver(browserName);
+		
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
+		
 		driver.get(host);	
 	}
 	
 	@BeforeClass(alwaysRun = true)
 	public void testLogin() {
 		
+		log.info("==== BeforeClass: login as admin ====");
 		LoginPage loginPage = new LoginPage(driver);
 		getPageInfo();
 		
@@ -69,17 +78,27 @@ public class BaseTest {
 		getPageInfo();
 	}
 
-	
+	// print current url and page title
 	public void getPageInfo() {
 		log.info(String.format("==== current url: %s, page title: %s", driver.getCurrentUrl(), driver.getTitle()));
 	}
 	
+	@AfterClass(alwaysRun = true)
+	public void afterClass() {
+		log.info("==== AfterClass: back to home of Dashboard Page ====");
+		DashboardPage dashboardPage = new DashboardPage(driver);
+		dashboardPage.enterDashboardHome();
+		getPageInfo();
+	}
 	
+	// tear down after class or after suite
 	@AfterSuite(alwaysRun = true)
-	public void closeDriver() {
-		log.info("==== AfterSuite: close driver ====");
+	public void tearDown() {
+		
+		log.info("==== AfterSuite: quit driver ====");
 		if(driver != null) {
-			driver.close();
+			//driver.close(); // close the browser or page which is having the focus
+			driver.quit(); // close all browser window and end the WebDriver session
 		}
 	}
 }

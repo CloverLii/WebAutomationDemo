@@ -30,6 +30,11 @@ public class DashboardPage extends BasePage{
 		return new EmployeesPage(driver);
 	}
 	
+	public DashboardPage enterDashboardHome() {
+		super.clickElement(dashboard);
+		return new DashboardPage(driver);
+	}
+	
 	public boolean isDashboard() {
 		if(dashboard.isDisplayed()) {
 			return true;
