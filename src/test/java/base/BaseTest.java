@@ -82,10 +82,10 @@ public class BaseTest {
 	}
 	
 	// tear down after class or after Class
-	@AfterClass(alwaysRun = true)
+	@AfterSuite(alwaysRun = true)
 	public void tearDown() {
 		
-		log.info("==== AfterClass: quit driver ====");
+		log.info("==== AfterSuite: quit driver ====");
 		if(driver != null) {
 			//driver.close(); // close the browser or page which is having the focus
 			driver.quit(); // close all browser window and end the WebDriver session

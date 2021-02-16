@@ -13,7 +13,8 @@
 	 
 	<test name="test with chrome">
 	    <classes>
-	      <class name="testcases.AddVisitorTest"/>
+	      <class name="pom.testcases.AddVisitorTest"/>
+	      <class name="pom.testcases.AddEmployeeTest"/>
 	    </classes>	  
 	  </test> 
 </suite> 

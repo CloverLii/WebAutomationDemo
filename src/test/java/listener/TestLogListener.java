@@ -43,7 +43,7 @@ public class TestLogListener extends TestListenerAdapter {
     public void onTestFailure(ITestResult result) {
         super.onTestFailure( result );
         log.error( String.format( "==== Test Fails: [%s.%s], because：\n%s====", result.getInstanceName(), result.getName(), result.getThrowable() ));
-        ScreenshotUtil.capture(result);
+       // ScreenshotUtil.capture(result);
     }
 
     @Override
