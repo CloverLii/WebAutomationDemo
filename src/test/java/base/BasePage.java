@@ -43,7 +43,7 @@ public class BasePage {
 		int size = select.getOptions().size();
 		int index = random.nextInt(size);
 		select.selectByIndex(index);
-		System.out.println("**** random index of select element: " + size + index);
+		System.out.println(String.format("**** select element size=%d, selectedIndex=%d: ", size, index));
 	}
 	
 	// locate single element by locator

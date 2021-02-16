@@ -40,16 +40,16 @@ public class AddVisitorTest extends BaseTest{
 		log.info("==== enter Visitors Page ====");			
 		visitorsPage = dashboardPage.enterVisitors();
 		
-		log.info("==== get number of visitors ====");
-		//int originalCount = visitorsPage.getVisitorsCount();
+		int originalCount = visitorsPage.getVisitorsCount();
+		log.info(String.format("==== number of visitors before adding: %d ====", originalCount));
 		
 		String name = DataBuilder.newVisitorName();
-		String company = DataBuilder.newCompany();
-		log.info(String.format("==== add new visitor: name=%s, company=%s", name, company));
-		
+		String company = DataBuilder.newCompany();	
 		visitorsPage.addVisitor(name, company);
+		log.info(String.format("==== add new visitor: name=%s, company=%s", name, company));	
+		
 		//int currentCount = visitorsPage.getVisitorsCount();
-		//log.info(String.format("==== number of visitors: %d, after adding: %d", originalCount, currentCount));
+		//log.info(String.format("==== number of visitors after adding: %d ====", currentCount));
 		
 		//assertEquals(currentCount, originalCount+1);		
 	}

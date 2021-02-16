@@ -40,6 +40,7 @@ public class VisitorsPage extends BasePage{
 	
 	//private WebElement cancelBtn = super.locateElement(By.linkText("Cancel"));
 	//private WebElement visitorsCount = super.locateElement(By.cssSelector(".selection-total-count"));
+	private WebElement visitorCount = super.locateElement(By.cssSelector("strong:nth-child(3)"));
 	
 	// add visitor with required values
 	public void addVisitor(String name, String company) {
@@ -61,6 +62,16 @@ public class VisitorsPage extends BasePage{
 
 	/* ======================== visitors =========================*/
 		
+	public int getVisitorsCount() {
+		String countStr = visitorCount.getText();
+		int visitorsCount = 0;
+		
+		if(countStr != null) {
+			visitorsCount = Integer.parseInt(countStr);
+		}
+		return visitorsCount;
+	}
+	
 	public void searchVisitor(String name) {
 		super.sendInput(searchInput, name);
 	}
@@ -86,10 +97,5 @@ public class VisitorsPage extends BasePage{
 	public void filterArchive(int statusIndex) {}	
 		
 	public void searchArchive(String keywords) {}
-	
-//	public int getVisitorsCount() {	
-//		int count = Integer.parseInt(visitorsCount.getText());
-//		return count;
-//	}
 	
 }
