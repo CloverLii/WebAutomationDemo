@@ -51,7 +51,7 @@ public class AddEmployeeTest  extends BaseTest {
 		log.info(String.format("==== add new employee: fName=%s, email=%s ====", firstName, email));
 		employeePage.addEmployee(firstName, email);
 		
-		int newCount = employeePage.getEmployeeCount()+1;
+		int newCount = employeePage.getEmployeeCount();
 		log.info(String.format("==== employees count after adding: %d ====", newCount));
 		assertEquals(newCount, employeeCount + 1);
 		
