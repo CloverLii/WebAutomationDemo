@@ -1,0 +1,150 @@
+{
+  "uid" : "e903097360f0812b",
+  "name" : "Add new employee with required values",
+  "fullName" : "pom.testcases.AddEmployeeTest.addEmployeeTest",
+  "historyId" : "41718c409c691bcab221ff89a06c4a23",
+  "time" : {
+    "start" : 1613449367327,
+    "stop" : 1613449367329,
+    "duration" : 2
+  },
+  "description" : "Add new Employee with valid first name and email",
+  "descriptionHtml" : "<p>Add new Employee with valid first name and email</p>\n",
+  "status" : "skipped",
+  "statusMessage" : "Driver must be set",
+  "statusTrace" : "java.lang.IllegalArgumentException: Driver must be set\n\tat org.openqa.selenium.internal.Require.nonNull(Require.java:51)\n\tat org.openqa.selenium.interactions.Actions.<init>(Actions.java:67)\n\tat base.BasePage.<init>(BasePage.java:35)\n\tat pom.pages.LoginPage.<init>(LoginPage.java:18)\n\tat base.BaseTest.testLogin(BaseTest.java:68)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)\n\tat org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)\n\tat org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)\n\tat org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)\n\tat org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)\n\tat java.util.ArrayList.forEach(ArrayList.java:1249)\n\tat org.testng.TestRunner.privateRun(TestRunner.java:766)\n\tat org.testng.TestRunner.run(TestRunner.java:587)\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:384)\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:286)\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1109)\n\tat org.testng.TestNG.runSuites(TestNG.java:1039)\n\tat org.testng.TestNG.run(TestNG.java:1007)\n\tat org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)\n\tat org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)\n\tat org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)\n",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "initBrowser",
+    "time" : {
+      "start" : 1613449344197,
+      "stop" : 1613449351397,
+      "duration" : 7200
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "testLogin",
+    "time" : {
+      "start" : 1613449367287,
+      "stop" : 1613449367294,
+      "duration" : 7
+    },
+    "description" : "",
+    "status" : "broken",
+    "statusMessage" : "Driver must be set",
+    "statusTrace" : "java.lang.IllegalArgumentException: Driver must be set\n\tat org.openqa.selenium.internal.Require.nonNull(Require.java:51)\n\tat org.openqa.selenium.interactions.Actions.<init>(Actions.java:67)\n\tat base.BasePage.<init>(BasePage.java:35)\n\tat pom.pages.LoginPage.<init>(LoginPage.java:18)\n\tat base.BaseTest.testLogin(BaseTest.java:68)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)\n\tat org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)\n\tat org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)\n\tat org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)\n\tat org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)\n\tat java.util.ArrayList.forEach(ArrayList.java:1249)\n\tat org.testng.TestRunner.privateRun(TestRunner.java:766)\n\tat org.testng.TestRunner.run(TestRunner.java:587)\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:384)\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:286)\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1109)\n\tat org.testng.TestNG.runSuites(TestNG.java:1039)\n\tat org.testng.TestNG.run(TestNG.java:1007)\n\tat org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)\n\tat org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)\n\tat org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)\n",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  }, {
+    "name" : "getProperties",
+    "time" : {
+      "start" : 1613449344170,
+      "stop" : 1613449344188,
+      "duration" : 18
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1613449367455,
+      "stop" : 1613449367595,
+      "duration" : 140
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "pom.testcases.AddEmployeeTest"
+  }, {
+    "name" : "testClass",
+    "value" : "pom.testcases.AddEmployeeTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "addEmployeeTest"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Web UI Test Suite 1"
+  }, {
+    "name" : "suite",
+    "value" : "test with chrome"
+  }, {
+    "name" : "subSuite",
+    "value" : "pom.testcases.AddEmployeeTest"
+  }, {
+    "name" : "host",
+    "value" : "Clovers-MBP.fritz.box"
+  }, {
+    "name" : "thread",
+    "value" : "71145@Clovers-MBP.fritz.box.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "feature",
+    "value" : "Add new Employee with required values"
+  }, {
+    "name" : "epic",
+    "value" : "Add Employee"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "accountConfigPath",
+    "value" : "src/test/resources/config/account.properties"
+  }, {
+    "name" : "browserName",
+    "value" : "chrome"
+  }, {
+    "name" : "log4jConPath",
+    "value" : "src/test/resources/log4j.properties"
+  }, {
+    "name" : "propertiesPath",
+    "value" : "src/test/resources/config/config.properties"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e903097360f0812b.json",
+  "parameterValues" : [ "src/test/resources/config/account.properties", "chrome", "src/test/resources/log4j.properties", "src/test/resources/config/config.properties" ]
+}

@@ -1,0 +1,51 @@
+[ {
+  "uid" : "aca04dba37937dc1",
+  "name" : "testLogin",
+  "time" : {
+    "start" : 1613449367315,
+    "stop" : 1613449367316,
+    "duration" : 1
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "e903097360f0812b",
+  "name" : "Add new employee with required values",
+  "time" : {
+    "start" : 1613449367327,
+    "stop" : 1613449367329,
+    "duration" : 2
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "db4572068b2ca787",
+  "name" : "signInNewAddedEmployee",
+  "time" : {
+    "start" : 1613449367360,
+    "stop" : 1613449367363,
+    "duration" : 3
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "b3fc03989cb19a96",
+  "name" : "Add new visitor with all values",
+  "time" : {
+    "start" : 1613449366208,
+    "stop" : 1613449367282,
+    "duration" : 1074
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "513469f3db1883a8",
+  "name" : "Add new visitor with required values",
+  "time" : {
+    "start" : 1613449352314,
+    "stop" : 1613449365670,
+    "duration" : 13356
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

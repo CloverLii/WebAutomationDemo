@@ -1,0 +1,15 @@
+{
+  "total" : 1,
+  "items" : [ {
+    "uid" : "73e5da653173b9b7e08fa2afe870ea81",
+    "name" : "Web UI Test Suite 1",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 2,
+      "passed" : 2,
+      "unknown" : 0,
+      "total" : 5
+    }
+  } ]
+}

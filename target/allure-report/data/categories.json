@@ -1,0 +1,26 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "Driver must be set",
+      "children" : [ {
+        "name" : "testLogin",
+        "uid" : "aca04dba37937dc1",
+        "parentUid" : "2ca6b3e4fe615e82c2e650e3f862d0bb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1613449367315,
+          "stop" : 1613449367316,
+          "duration" : 1
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "src/test/resources/config/account.properties", "chrome", "src/test/resources/log4j.properties", "src/test/resources/config/config.properties" ]
+      } ],
+      "uid" : "2ca6b3e4fe615e82c2e650e3f862d0bb"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
+  "name" : "categories"
+}

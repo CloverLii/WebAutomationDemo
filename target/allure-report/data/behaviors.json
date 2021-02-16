@@ -1,0 +1,94 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "children" : [ {
+    "name" : "Add new visitor",
+    "children" : [ {
+      "name" : "Add new visitor with required values",
+      "children" : [ {
+        "name" : "Add new visitor with required values",
+        "uid" : "513469f3db1883a8",
+        "parentUid" : "dfbac4b4331f2d402b7313c89f591acc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1613449352314,
+          "stop" : 1613449365670,
+          "duration" : 13356
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "src/test/resources/config/account.properties", "chrome", "src/test/resources/log4j.properties", "src/test/resources/config/config.properties" ]
+      } ],
+      "uid" : "dfbac4b4331f2d402b7313c89f591acc"
+    }, {
+      "name" : "Add new visitor with all values",
+      "children" : [ {
+        "name" : "Add new visitor with all values",
+        "uid" : "b3fc03989cb19a96",
+        "parentUid" : "ac384b2d0325070d25d13484afecbe3b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1613449366208,
+          "stop" : 1613449367282,
+          "duration" : 1074
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "src/test/resources/config/account.properties", "chrome", "src/test/resources/log4j.properties", "src/test/resources/config/config.properties" ]
+      } ],
+      "uid" : "ac384b2d0325070d25d13484afecbe3b"
+    } ],
+    "uid" : "766a4e2f63f74542f92a2eee1fdcfc0c"
+  }, {
+    "name" : "Add Employee",
+    "children" : [ {
+      "name" : "testLogin",
+      "uid" : "aca04dba37937dc1",
+      "parentUid" : "d97927f9c9b35864f7abce090048f3e2",
+      "status" : "broken",
+      "time" : {
+        "start" : 1613449367315,
+        "stop" : 1613449367316,
+        "duration" : 1
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "src/test/resources/config/account.properties", "chrome", "src/test/resources/log4j.properties", "src/test/resources/config/config.properties" ]
+    }, {
+      "name" : "Add new Employee with required values",
+      "children" : [ {
+        "name" : "Add new employee with required values",
+        "uid" : "e903097360f0812b",
+        "parentUid" : "793a288886fc0022d28cfb85d11fd30a",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1613449367327,
+          "stop" : 1613449367329,
+          "duration" : 2
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "src/test/resources/config/account.properties", "chrome", "src/test/resources/log4j.properties", "src/test/resources/config/config.properties" ]
+      } ],
+      "uid" : "793a288886fc0022d28cfb85d11fd30a"
+    }, {
+      "name" : "Sign in employee",
+      "children" : [ {
+        "name" : "signInNewAddedEmployee",
+        "uid" : "db4572068b2ca787",
+        "parentUid" : "fdde2e93d09ddbac26e0d6b59c12082a",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1613449367360,
+          "stop" : 1613449367363,
+          "duration" : 3
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "src/test/resources/config/account.properties", "chrome", "src/test/resources/log4j.properties", "src/test/resources/config/config.properties" ]
+      } ],
+      "uid" : "fdde2e93d09ddbac26e0d6b59c12082a"
+    } ],
+    "uid" : "d97927f9c9b35864f7abce090048f3e2"
+  } ],
+  "name" : "behaviors"
+}

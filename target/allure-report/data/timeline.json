@@ -1,0 +1,78 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "children" : [ {
+    "name" : "Clovers-MBP.fritz.box",
+    "children" : [ {
+      "name" : "71145@Clovers-MBP.fritz.box.main(1)",
+      "children" : [ {
+        "name" : "Add new visitor with all values",
+        "uid" : "b3fc03989cb19a96",
+        "parentUid" : "e03aaaf591e25ce982c64155b5c146ef",
+        "status" : "passed",
+        "time" : {
+          "start" : 1613449366208,
+          "stop" : 1613449367282,
+          "duration" : 1074
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "src/test/resources/config/account.properties", "chrome", "src/test/resources/log4j.properties", "src/test/resources/config/config.properties" ]
+      }, {
+        "name" : "testLogin",
+        "uid" : "aca04dba37937dc1",
+        "parentUid" : "e03aaaf591e25ce982c64155b5c146ef",
+        "status" : "broken",
+        "time" : {
+          "start" : 1613449367315,
+          "stop" : 1613449367316,
+          "duration" : 1
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "src/test/resources/config/account.properties", "chrome", "src/test/resources/log4j.properties", "src/test/resources/config/config.properties" ]
+      }, {
+        "name" : "Add new employee with required values",
+        "uid" : "e903097360f0812b",
+        "parentUid" : "e03aaaf591e25ce982c64155b5c146ef",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1613449367327,
+          "stop" : 1613449367329,
+          "duration" : 2
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "src/test/resources/config/account.properties", "chrome", "src/test/resources/log4j.properties", "src/test/resources/config/config.properties" ]
+      }, {
+        "name" : "signInNewAddedEmployee",
+        "uid" : "db4572068b2ca787",
+        "parentUid" : "e03aaaf591e25ce982c64155b5c146ef",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1613449367360,
+          "stop" : 1613449367363,
+          "duration" : 3
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "src/test/resources/config/account.properties", "chrome", "src/test/resources/log4j.properties", "src/test/resources/config/config.properties" ]
+      }, {
+        "name" : "Add new visitor with required values",
+        "uid" : "513469f3db1883a8",
+        "parentUid" : "e03aaaf591e25ce982c64155b5c146ef",
+        "status" : "passed",
+        "time" : {
+          "start" : 1613449352314,
+          "stop" : 1613449365670,
+          "duration" : 13356
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "src/test/resources/config/account.properties", "chrome", "src/test/resources/log4j.properties", "src/test/resources/config/config.properties" ]
+      } ],
+      "uid" : "e03aaaf591e25ce982c64155b5c146ef"
+    } ],
+    "uid" : "c2f3ba61a5b74773cfe682025b90f7e9"
+  } ],
+  "name" : "timeline"
+}

@@ -1,0 +1,6 @@
+"Epic","Feature","Story","FAILED","BROKEN","PASSED","SKIPPED","UNKNOWN"
+"Add Employee","","","0","1","0","0","0"
+"Add Employee","Add new Employee with required values","","0","0","0","1","0"
+"Add Employee","Sign in employee","","0","0","0","1","0"
+"Add new visitor","Add new visitor with all values","","0","0","1","0","0"
+"Add new visitor","Add new visitor with required values","","0","0","1","0","0"

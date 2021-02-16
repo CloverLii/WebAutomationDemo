@@ -1,0 +1,146 @@
+{
+  "uid" : "b3fc03989cb19a96",
+  "name" : "Add new visitor with all values",
+  "fullName" : "pom.testcases.AddVisitorTest.addVisitor2",
+  "historyId" : "2112183bd830d48175bb8074d1de63a9",
+  "time" : {
+    "start" : 1613449366208,
+    "stop" : 1613449367282,
+    "duration" : 1074
+  },
+  "description" : "Add new visitor with name, company, location and host",
+  "descriptionHtml" : "<p>Add new visitor with name, company, location and host</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "initBrowser",
+    "time" : {
+      "start" : 1613449344197,
+      "stop" : 1613449351397,
+      "duration" : 7200
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "testLogin",
+    "time" : {
+      "start" : 1613449351424,
+      "stop" : 1613449352234,
+      "duration" : 810
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "getProperties",
+    "time" : {
+      "start" : 1613449344170,
+      "stop" : 1613449344188,
+      "duration" : 18
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1613449367455,
+      "stop" : 1613449367595,
+      "duration" : 140
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "pom.testcases.AddVisitorTest"
+  }, {
+    "name" : "testClass",
+    "value" : "pom.testcases.AddVisitorTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "addVisitor2"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Web UI Test Suite 1"
+  }, {
+    "name" : "suite",
+    "value" : "test with chrome"
+  }, {
+    "name" : "subSuite",
+    "value" : "pom.testcases.AddVisitorTest"
+  }, {
+    "name" : "host",
+    "value" : "Clovers-MBP.fritz.box"
+  }, {
+    "name" : "thread",
+    "value" : "71145@Clovers-MBP.fritz.box.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "feature",
+    "value" : "Add new visitor with all values"
+  }, {
+    "name" : "epic",
+    "value" : "Add new visitor"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "accountConfigPath",
+    "value" : "src/test/resources/config/account.properties"
+  }, {
+    "name" : "browserName",
+    "value" : "chrome"
+  }, {
+    "name" : "log4jConPath",
+    "value" : "src/test/resources/log4j.properties"
+  }, {
+    "name" : "propertiesPath",
+    "value" : "src/test/resources/config/config.properties"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "b3fc03989cb19a96.json",
+  "parameterValues" : [ "src/test/resources/config/account.properties", "chrome", "src/test/resources/log4j.properties", "src/test/resources/config/config.properties" ]
+}

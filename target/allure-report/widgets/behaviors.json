@@ -1,0 +1,26 @@
+{
+  "total" : 2,
+  "items" : [ {
+    "uid" : "d97927f9c9b35864f7abce090048f3e2",
+    "name" : "Add Employee",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 2,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 3
+    }
+  }, {
+    "uid" : "766a4e2f63f74542f92a2eee1fdcfc0c",
+    "name" : "Add new visitor",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 2,
+      "unknown" : 0,
+      "total" : 2
+    }
+  } ]
+}

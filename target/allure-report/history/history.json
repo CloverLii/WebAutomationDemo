@@ -1,0 +1,100 @@
+{
+  "d1ed166a8654d86e00bb4c87bfc3266d" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "513469f3db1883a8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1613449352314,
+        "stop" : 1613449365670,
+        "duration" : 13356
+      }
+    } ]
+  },
+  "41718c409c691bcab221ff89a06c4a23" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 1,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "e903097360f0812b",
+      "status" : "skipped",
+      "statusDetails" : "Driver must be set",
+      "time" : {
+        "start" : 1613449367327,
+        "stop" : 1613449367329,
+        "duration" : 2
+      }
+    } ]
+  },
+  "2112183bd830d48175bb8074d1de63a9" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "b3fc03989cb19a96",
+      "status" : "passed",
+      "time" : {
+        "start" : 1613449366208,
+        "stop" : 1613449367282,
+        "duration" : 1074
+      }
+    } ]
+  },
+  "f31c141688a19458e6e453ed9857c244" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "aca04dba37937dc1",
+      "status" : "broken",
+      "statusDetails" : "Driver must be set",
+      "time" : {
+        "start" : 1613449367315,
+        "stop" : 1613449367316,
+        "duration" : 1
+      }
+    } ]
+  },
+  "7699cc1c65cdbd6c4d55d74884213dd0" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 1,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "db4572068b2ca787",
+      "status" : "skipped",
+      "statusDetails" : "Driver must be set",
+      "time" : {
+        "start" : 1613449367360,
+        "stop" : 1613449367363,
+        "duration" : 3
+      }
+    } ]
+  }
+}
