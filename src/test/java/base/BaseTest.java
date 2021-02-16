@@ -12,8 +12,6 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
-
-import pom.pages.DashboardPage;
 import pom.pages.LoginPage;
 import util.PropertiesReader;
 
@@ -83,19 +81,11 @@ public class BaseTest {
 		log.info(String.format("==== current url: %s, page title: %s", driver.getCurrentUrl(), driver.getTitle()));
 	}
 	
+	// tear down after class or after Class
 	@AfterClass(alwaysRun = true)
-	public void afterClass() {
-		log.info("==== AfterClass: back to home of Dashboard Page ====");
-		DashboardPage dashboardPage = new DashboardPage(driver);
-		dashboardPage.enterDashboardHome();
-		getPageInfo();
-	}
-	
-	// tear down after class or after suite
-	@AfterSuite(alwaysRun = true)
 	public void tearDown() {
 		
-		log.info("==== AfterSuite: quit driver ====");
+		log.info("==== AfterClass: quit driver ====");
 		if(driver != null) {
 			//driver.close(); // close the browser or page which is having the focus
 			driver.quit(); // close all browser window and end the WebDriver session
