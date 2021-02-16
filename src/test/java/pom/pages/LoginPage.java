@@ -45,11 +45,7 @@ public class LoginPage extends BasePage{
 	}
 	
 	public boolean isLoginPage(){
-		if(driver.getCurrentUrl().equals(PageURL.LOGIN_PAGE)) {
-			return true;
-		}else {
-			return false;
-		}
+		return driver.getCurrentUrl().equals(PageURL.LOGIN_PAGE);
 	}	
 	
 }

@@ -5,6 +5,7 @@ import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
@@ -80,11 +81,11 @@ public class BaseTest {
 		log.info(String.format("==== current url: %s, page title: %s", driver.getCurrentUrl(), driver.getTitle()));
 	}
 	
-	// tear down after class or after suite
-	@AfterSuite(alwaysRun = true)
+	// tear down after class or after Class
+	@AfterClass(alwaysRun = true)
 	public void tearDown() {
 		
-		log.info("==== AfterSuite: quit driver ====");
+		log.info("==== AfterClass: quit driver ====");
 		if(driver != null) {
 			//driver.close(); // close the browser or page which is having the focus
 			driver.quit(); // close all browser window and end the WebDriver session
